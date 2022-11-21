@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 50%;
+}
+body {
+  background: url(../images/fisi.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  margin: 2rem;
+  padding: 6rem 2rem;
+  background: rgba(0, 102, 120, 0.297);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.7);
+  border-radius: 2rem;
+  max-width: 520px;
+  min-width: fit-content;
+  min-height: fit-content;
+}
+.text {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  color: white;
+}
+.form__title {
+  font-size: 6.5rem;
+  text-align: center;
+  padding: 0;
+}
+.form__subTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+.form__description {
+  font-size: 2.1rem;
+  font-weight: 300;
+}
+.inputBox {
+  margin-bottom: 3rem;
+}
+.inputBox__label {
+  margin-bottom: 2rem;
+  display: inline-block;
+  line-height: 2rem;
+  padding: 0rem 1rem;
+  border-left: 0.5rem solid white;
+}
+.inputBox__input {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+.link--darkcyan {
+  color: rgb(25, 135, 155);
+}
+.icon {
+  background-color: rgba(16, 140, 159, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 6rem;
+  height: 6rem;
+  padding: 0;
+  margin: 0;
+  border-radius: 100%;
+}
+.inputBox__input__textArea {
+  background-color: rgba(16, 140, 159, 0.7);
+  border: none;
+  border-radius: 1rem;
+  flex-grow: 1;
+  padding: 1.5rem;
+  width: 5rem;
+}
+form {
+  width: 100%;
+}
+.form__end {
+  text-align: center;
+}
+.form__end__newAccount {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.button {
+  background: rgba(16, 140, 159, 0.7);
+  border: none;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.button:active,
+.button:hover {
+  transform: scale(1.1);
+}
+.inputBox__input.success input {
+  border-color: greenyellow;
+}
+
+.inputBox__input.error input {
+  border-color: red;
+}
+
+.inputBox__input i {
+  visibility: hidden;
+  position: absolute;
+  margin-left: 5px;
+}
+
+.inputBox__input.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.inputBox__input.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.inputBox__input small {
+  color: red;
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  visibility: hidden;
+}
+
+.inputBox__input.error small {
+  visibility: visible;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+  .container {
+    padding: 3rem 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    justify-content: right;
+  }
+  .container {
+    margin: 10rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}

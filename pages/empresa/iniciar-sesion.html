@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bolsa de trabajo - FISI</title>
+    <link rel="shortcut icon" href="../../images/logo.png" />
+    <link rel="styleSheet" href="../../css/style-iniciar-sesion.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form method="get" action="./pagina-inicio.html">
+        <h1 class="form__title text">Iniciar sesión</h1>
+        <div class="inputBox">
+          <div class="inputBox__label">
+            <label
+              for="login-username"
+              class="inputBox__label__1 text form__description"
+              >Correo</label
+            >
+          </div>
+          <div class="inputBox__input">
+            <div class="icon text form__description">
+              <ion-icon name="at-outline"></ion-icon>
+            </div>
+            <input
+              id="login-username"
+              type="text"
+              class="inputBox__input__textArea form__description text"
+              name="username"
+              value=""
+              placeholder="Ingrese su correo"
+              autocomplete="Off"
+              required
+              autofocus
+            />
+          </div>
+        </div>
+        <div class="inputBox">
+          <div class="inputBox__label">
+            <label
+              for="login-password"
+              class="inputBox__label__1 text form__description"
+              >Contraseña</label
+            >
+          </div>
+          <div class="inputBox__input">
+            <div class="icon text form__description">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+            </div>
+            <input
+              id="login-password"
+              type="password"
+              class="inputBox__input__textArea form__description text"
+              name="password"
+              placeholder="Ingrese su contraseña"
+              required
+            />
+          </div>
+        </div>
+        <div class="form__end">
+          <input
+            type="submit"
+            class="button text form__description"
+            value="Ingresar"
+          />
+          <div class="text form__description">¿Aún no tienes una cuenta?</div>
+          <div class="form__end__newAccount">
+            <a href="./registro.html" class="link text form__description"
+              >Registrarme como empresa</a
+            >
+            <a
+              href="../postulante/registro.html"
+              class="link text form__description"
+              >Registrarme como postulante</a
+            >
+          </div>
+        </div>
+      </form>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

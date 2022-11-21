@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Poppins:wght@300&family=Roboto+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 80vw;
+  background-color: #1d2021;
+}
+
+.cabeza {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bad Script", cursive;
+}
+
+h2 .titulo {
+  display: flex;
+  color: transparent;
+}
+
+h2 span {
+  font-size: 5vw;
+  animation: animate 3s linear infinite;
+  animation-delay: calc(0.1s * var(--l));
+}
+
+@keyframes animate {
+  0% {
+    color: #fff;
+    filter: blur(2px) hue-rotate(0deg);
+    text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+      0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff, 0 0 300px #00b3ff,
+      0 0 400px #00b3ff;
+  }
+  30%,
+  70% {
+    color: #fff;
+    filter: blur(2px) hue-rotate(360deg);
+    text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+      0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff;
+  }
+  100% {
+    color: transparent;
+    box-shadow: none;
+    filter: blur(2px) hue-rotate(0deg);
+  }
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  width: 100%;
+  height: 100%;
+}
+
+.tarjeta {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarjeta::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120vw;
+  height: 120vh;
+  background: #ffffff;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+  color: rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta:hover::before {
+  opacity: 1;
+}
+
+.tarjeta:nth-child(1)::before {
+  background: #ffd124;
+}
+
+.tarjeta:nth-child(2)::before {
+  background: #00afc1;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+  border-radius: 20px;
+  transition: 0.5s;
+  transition-delay: 0.3s;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card:hover {
+  width: 600px;
+  transition-delay: 0;
+}
+
+.card .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--clr);
+  clip-path: circle(120px at center);
+  transition: 0.5s;
+}
+
+.card:hover .circle::before {
+  clip-path: circle(400px at center);
+}
+
+.card .circle .logo {
+  position: relative;
+  width: 200px;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.card:hover .circle .logo {
+  transform: scale(0);
+  transition-delay: 0s;
+}
+
+.card .circle .logo2 {
+  position: relative;
+  width: 170px;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.card:hover .circle .logo2 {
+  transform: scale(0);
+  transition-delay: 0s;
+}
+
+.content {
+  position: relative;
+  width: 50%;
+  left: 20%;
+  padding: 20px 20px 20px 40px;
+  opacity: 0;
+  transition: 0.5s;
+  visibility: hidden;
+}
+
+.card:hover .content {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.content h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  line-height: 1em;
+}
+
+.content p {
+  color: #fff;
+}
+
+.content a {
+  position: relative;
+  color: black;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card .product_img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  height: 440px;
+  transition: 0.5s;
+}
+
+.card:hover .product_img {
+  left: 72%;
+  transform: translate(-50%, -50%) scale(1);
+  transition-delay: 0.5s;
+}
+
+.card .product_img2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  height: 400px;
+  transition: 0.5s;
+}
+
+.card:hover .product_img2 {
+  left: 72%;
+  transform: translate(-50%, -50%) scale(1);
+  transition-delay: 0.5s;
+}
+
+@media (max-width: 991px) {
+  .tarjeta::before {
+    width: 100vw;
+    height: 200vh;
+  }
+
+  .contenedor {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: auto;
+    max-width: 350px;
+    align-items: flex-start;
+  }
+
+  .card:hover {
+    height: 600px;
+  }
+
+  .card:hover .product_img {
+    top: initial;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%) scale(1);
+    height: 280px;
+  }
+
+  .card:hover .product_img2 {
+    top: initial;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%) scale(1);
+    height: 260px;
+  }
+
+  .card .content {
+    width: 100%;
+    left: 0;
+    padding: 40px;
+  }
+}

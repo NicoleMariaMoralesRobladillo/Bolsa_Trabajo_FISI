@@ -1,0 +1,300 @@
+/*RESET*/
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html {
+  font-size: 50%;
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.3fr 9fr 0.3fr;
+  grid-template-rows: max-content max-content;
+  grid-template-areas:
+    "header header header"
+    ". main .";
+}
+
+/*BOXES*/
+
+.container {
+  margin: 2rem 0;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.col {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/*LINK*/
+
+a {
+  text-decoration: none;
+  padding: 0;
+}
+
+/*TEXT*/
+
+.text {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.8rem;
+  color: black;
+}
+.text--subTitle {
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.text--subTitle--marginBottom {
+  margin-bottom: 2rem;
+}
+.text--title {
+  font-weight: bold;
+  font-size: 4rem;
+  text-align: center;
+  background-color: rgba(0, 147, 171, 0.458);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+/*HEADER*/
+
+header {
+  background-color: rgba(0, 147, 171, 0.458);
+  position: sticky;
+  z-index: 1;
+  padding: 1.7rem;
+  grid-area: header;
+  height: fit-content;
+}
+.container--header {
+  position: relative;
+  margin: 0;
+}
+.logo {
+  width: 25rem;
+}
+
+/*NAV*/
+
+.nav {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  visibility: hidden;
+}
+.nav__list {
+  list-style-type: none;
+}
+.nav__item {
+  padding: 1.5rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav__item:hover,
+.nav__item:focus {
+  background-color: #ffd124;
+  border-radius: 1rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  margin-left: 1rem;
+}
+.nav__link--red {
+  color: #ce4444;
+}
+.usuario {
+  margin-top: 2rem;
+}
+.usuario,
+.usuarioDatos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.usuarioFoto {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.usuarioFoto__foto {
+  width: 100%;
+}
+
+/*NAV BUTTON*/
+
+.navToggle {
+  cursor: pointer;
+  border: none;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  background-color: rgb(0, 106, 122);
+  position: absolute;
+  right: 0rem;
+  top: 1.4rem;
+}
+.navToggle:focus,
+.navToggle:hover {
+  transform: scale(1.1);
+}
+.hamburger {
+  width: 50%;
+  position: relative;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background: white;
+}
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  width: 100%;
+}
+.hamburger::before {
+  transform: translateY(-6px);
+}
+.hamburger::after {
+  transform: translateY(3px);
+}
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
+/*MAIN*/
+
+main {
+  grid-area: main;
+}
+.titleBox {
+  margin: 2rem 0;
+  text-align: center;
+}
+.cardsBox {
+  background-color: rgba(0, 145, 167, 0.223);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.card {
+  background-color: rgba(0, 148, 171, 0.289);
+  border-radius: 1rem;
+  padding: 2rem;
+  line-height: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+.card__label {
+  display: block;
+}
+.card__input {
+  display: block;
+  width: 100%;
+  border-radius: 1rem;
+  border: none;
+  padding: 0.8rem;
+}
+
+/*BUTTONS*/
+
+.button {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+.button--yellow {
+  background-color: #ffd124;
+}
+.button--white {
+  background-color: rgb(255, 255, 255);
+}
+.button--darkcyan {
+  background-color: rgb(0, 106, 122);
+  color: white;
+}
+.button:active,
+.button:hover {
+  transform: scale(1.1);
+}
+.buttonBox {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/*MEDIA QUERIES*/
+
+@media (min-width: 413px) {
+  html {
+    font-size: 53%;
+  }
+}
+@media (min-width: 1200px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  .card {
+    width: 50%;
+    height: auto;
+  }
+  .card__input--textarea {
+    flex-basis: 100%;
+    flex-shrink: 1;
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 1300px) {
+  html {
+    font-size: 55%;
+  }
+  .usuarioDatos {
+    margin-left: 1rem;
+  }
+  body {
+    grid-template-columns: 0.5fr 0.1fr 6fr 0.1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header . main .";
+  }
+  .logo {
+    margin: 0 3rem;
+  }
+  .usuario {
+    flex-direction: row;
+  }
+  .nav {
+    visibility: visible;
+  }
+  header {
+    height: auto;
+    min-height: 525px;
+  }
+  .navToggle {
+    visibility: hidden;
+  }
+}
